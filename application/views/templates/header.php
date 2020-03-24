@@ -10,19 +10,29 @@
         <meta property="og:description"   content="Your description" />
         <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
         <!--<link rel="stylesheet" href="./css/main.css">-->
-        <?php echo link_tag('css/main.css');?>
+        <?php echo link_tag('css/main.css'); ?>
+        <?php echo link_tag('css/magic.min.css'); ?>
+        <?php echo link_tag('css/animate.min.css'); ?>
         <script src="https://kit.fontawesome.com/6cfa4c0aa7.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="wrap">
             <div class="container">
-                <!--<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd; opacity: .8">-->
-                <nav class="navbar navbar-expand-lg navbar-light background rounded-bottom">
+<!--            <div class="row mt-5">
+            </div>-->
+                <nav class="animated fadeInDown navbar navbar-expand-lg navbar-light background rounded-bottom" id="animate">
                     <a class="navbar-brand mx-2" href="./">
                         <!--<img src="./img/logo_car.png" width="200" height="57" alt="">-->
                         <div class="lead text-dark">
                             <div>🌍 Language school</div> 
                         </div>
+<!--                        <script src="./js/jquery-3.3.1.slim.min.js"></script>
+                        <script type="text/javascript">
+                            $('#animate').click(function(){
+                                $(this).addClass('magictime swashOut');
+                                console.log("hover");
+                            });
+                        </script>-->
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -33,7 +43,7 @@
                             <a class="nav-item nav-link url" href="?activities">🚴‍♂️ Scheduled activities</a>
                             <a class="nav-item nav-link url" href="?team">🧙 Our team</a>
                             <!--<a class="nav-item nav-link url" href="./news">News</a>-->
-                            <?php echo anchor('news', '🗞 News', 'class="nav-item nav-link url"');?>
+                            <?php echo anchor('news', '🗞 News', 'class="nav-item nav-link url"'); ?>
                             <!--Prints: <a href="http://example.com/index.php/news/local/123" title="News title">My News</a>-->
                         </div>  
                     </div>
@@ -49,3 +59,5 @@
                         </div>
                     </div>
                 </div>
+                <!--<h1 class="animated infinite bounceInRight delay-2s">Example</h1>-->
+                <!--<h1 class="animated bounceInRight">Example</h1>-->

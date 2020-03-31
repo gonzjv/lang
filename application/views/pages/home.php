@@ -11,7 +11,7 @@
 <?php else: ?>
 
     <?php echo form_open('login'); ?>
-    <div class="row mt-md-5">
+    <div class="row mt-md-5 animated fadeInDown ">
         <div class="col-md-3">
             <?php
             echo form_label('', 'email');
@@ -24,7 +24,7 @@
             ?>
         </div>
     </div>
-    <div class="row">
+    <div class="row animated fadeInDown ">
         <div class="col-md-3">
             <?php
             echo form_label('', 'password');
@@ -42,7 +42,7 @@
             <?php echo validation_errors(); ?>
         </div>
     </div>
-    <div class="row">
+    <div class="row animated fadeInDown ">
         <div class="col-md-4">
             <div class="ml-2 mt-4">
                 <!--<input type="hidden" name="action" value="reg">-->
@@ -55,6 +55,5 @@
     </div>
     </form>
 <?php endif; ?>
-</div>
 </div>
 </div>

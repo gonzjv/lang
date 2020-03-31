@@ -11,7 +11,6 @@
         <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
         <!--<link rel="stylesheet" href="./css/main.css">-->
         <?php echo link_tag('css/main.css'); ?>
-        <?php echo link_tag('css/magic.min.css'); ?>
         <?php echo link_tag('css/animate.min.css'); ?>
         <script src="https://kit.fontawesome.com/6cfa4c0aa7.js" crossorigin="anonymous"></script>
     </head>

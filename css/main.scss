@@ -36,9 +36,12 @@
     text-decoration-style: dotted;
 }
 a {
-  /*color: var(--white);*/
-  color: #e3f2fd;
+    /*color: var(--white);*/
+    color: #e3f2fd;
 }
+a:hover {
+    color: #feee00;
+    text-decoration: underline; }
 .background{
     background-color: #e3f2fd; 
     opacity: .9

@@ -28,13 +28,11 @@ class Login extends CI_Controller {
             $this->load->model('insert_model');
             $email = $this->input->post('email');
             $password = $this->input->post('password');
-            echo $password;
             $data['user_info'] = $this->insert_model->get_user_info($email);
             if (password_verify($password, $data['user_info']['password'])) {
                 $this->session->name = $data['user_info']['name'];
                 $this->session->surname = $data['user_info']['surname'];
                 $this->session->email = $data['user_info']['email'];
-                echo $this->session->name . ' from session';
             }
             $this->load->view('templates/header', $data);
             $this->load->view('pages/home');
@@ -47,10 +45,6 @@ class Login extends CI_Controller {
         $this->session->unset_userdata('surname');
         $this->session->unset_userdata('email');
         redirect('/');
-//        $data['title'] = "Home";
-//        $this->load->view('templates/header', $data);
-//        $this->load->view('pages/home');
-//        $this->load->view('templates/footer', $data);
     }
 
 }

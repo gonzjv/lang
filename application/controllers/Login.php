@@ -19,7 +19,6 @@ class Login extends CI_Controller {
         $this->form_validation->set_rules('email', 'Email', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
 
-
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('templates/header', $data);
             $this->load->view('pages/home');
@@ -33,7 +32,17 @@ class Login extends CI_Controller {
                 $this->session->name = $data['user_info']['name'];
                 $this->session->surname = $data['user_info']['surname'];
                 $this->session->email = $data['user_info']['email'];
+                $this->session->role = $data['user_info']['role'];
             }
+
+            function user_is_teacher() {
+                if ($data['user_info']['role'] == 'teacher') {
+                    return TRUE;
+                } else{
+                    return FALSE;
+                }
+            }
+
             $this->load->view('templates/header', $data);
             $this->load->view('pages/home');
             $this->load->view('templates/footer', $data);

@@ -4,6 +4,12 @@
             <div class="mt-3 text-center lead background rounded">
                 <?php echo $this->session->name . ', you are here!' ?>
             </div>
+            <?php if (user_is_teacher()): ?>
+                <div class="mt-3">
+                    <?php echo form_open('login/session_unset'); ?>
+                    <button type="submit" class="btn btn-warning btn-sm">Pupils🌄</button>
+                </div>
+            <?php endif; ?>
         </div>
         <div class="col-md-2">
             <div class="mt-3">

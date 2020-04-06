@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-3">
             <div class="mt-3 text-center lead background rounded">
-                <?php echo $this->session->name . ', you are here!' ?>
+                <?php echo $this->session->name . ', you are here! 📘' ?>
             </div>
             <?php if ($this->session->role == 'teacher'): ?>
                 <div class="mt-3">
@@ -11,11 +11,11 @@
                 </div>
                 <div class="mt-3">
                     <?php echo form_open('login/session_unset'); ?>
-                    <button type="submit" class="btn btn-sm background">📒 Class Diary</button>
+                    <button type="submit" class="btn btn-sm background">📘 Class Diary</button>
                 </div>
                 <div class="mt-3">
                     <?php echo form_open('login/session_unset'); ?>
-                    <button type="submit" class="btn btn-sm background">📅 Lessons schedule</button>
+                    <button type="submit" class="btn btn-sm background">📆 Lessons schedule</button>
                 </div>
             <?php endif; ?>
         </div>

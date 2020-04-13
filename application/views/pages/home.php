@@ -13,20 +13,24 @@
                 <div class="mt-3">
                     <?php echo form_open('login/session_unset'); ?>
                     <button type="submit" class="btn btn-sm background">📘 Class Diary</button>
+                    </form>
                 </div>
                 <div class="mt-3">
                     <?php echo form_open('login/session_unset'); ?>
                     <button type="submit" class="btn btn-sm background">📆 Lessons schedule</button>
+                    </form>
                 </div>
             <?php endif; ?>
             <?php if ($this->session->role == 'pupil'): ?>
                 <div class="mt-3">
                     <?php echo form_open('login/session_unset'); ?>
                     <button type="submit" class="btn btn-sm background">📘 Homework</button>
+                    </form>
                 </div>
                 <div class="mt-3">
                     <?php echo form_open('login/session_unset'); ?>
                     <button type="submit" class="btn btn-sm background">📆 Lessons schedule</button>
+                    </form>
                 </div>
             <?php endif; ?>
         </div>
@@ -37,6 +41,7 @@
             </div>
         </div>
     </div>
+    </form>
 <?php else: ?>
 
     <?php echo form_open('login'); ?>

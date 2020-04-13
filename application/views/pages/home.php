@@ -2,16 +2,27 @@
     <div class="row">
         <div class="col-md-3">
             <div class="mt-3 text-center lead background rounded">
-                <?php echo $this->session->name . ', you are here! 📘' ?>
+                <?php echo $this->session->role . ' ' . $this->session->name . ', you are here!' ?>
             </div>
             <?php if ($this->session->role == 'teacher'): ?>
                 <div class="mt-3">
-                    <?php echo form_open('login/session_unset'); ?>
-                    <button type="submit" class="btn btn-sm background">🚸 Pupils</button>
+                    <?php echo form_open('teacher/classe!!!!!!!!!!'); ?>
+                    <button type="submit" class="btn btn-sm background">🚸 Classes</button>
+                    </form>
                 </div>
                 <div class="mt-3">
                     <?php echo form_open('login/session_unset'); ?>
                     <button type="submit" class="btn btn-sm background">📘 Class Diary</button>
+                </div>
+                <div class="mt-3">
+                    <?php echo form_open('login/session_unset'); ?>
+                    <button type="submit" class="btn btn-sm background">📆 Lessons schedule</button>
+                </div>
+            <?php endif; ?>
+            <?php if ($this->session->role == 'pupil'): ?>
+                <div class="mt-3">
+                    <?php echo form_open('login/session_unset'); ?>
+                    <button type="submit" class="btn btn-sm background">📘 Homework</button>
                 </div>
                 <div class="mt-3">
                     <?php echo form_open('login/session_unset'); ?>

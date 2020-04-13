@@ -8,8 +8,6 @@ class Login extends CI_Controller {
         $this->load->helper('url');
     }
 
-    public $user_is_teacher;
-
     public function index() {
         $this->load->library('form_validation');
         $this->load->helper('html');
@@ -36,18 +34,6 @@ class Login extends CI_Controller {
                 $this->session->email = $data['user_info']['email'];
                 $this->session->role = $data['user_info']['role'];
             }
-            if ($data['user_info']['role'] == 'teacher') {
-                $user_is_teacher = 1;
-            }
-
-//            function user_is_teacher() {
-//                if ($data['user_info']['role'] == 'teacher') {
-//                    return TRUE;
-//                } else{
-//                    return FALSE;
-//                }
-//            }
-
             $this->load->view('templates/header', $data);
             $this->load->view('pages/home');
             $this->load->view('templates/footer', $data);

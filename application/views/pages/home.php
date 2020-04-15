@@ -6,7 +6,7 @@
             </div>
             <?php if ($this->session->role == 'teacher'): ?>
                 <div class="mt-3">
-                    <?php echo form_open('teacher/classe!!!!!!!!!!'); ?>
+                    <?php echo form_open('teacher/classes'); ?>
                     <button type="submit" class="btn btn-sm background">🚸 Classes</button>
                     </form>
                 </div>

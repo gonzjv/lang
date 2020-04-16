@@ -9,8 +9,9 @@ class Teacher_model extends CI_Model {
     }
 
     public function get_classes() {
-//        $query = $this->db->get('classes', 2);
-        $query = $this->db->get('classes');
+//        $query = $this->db->get_where('classes', array ('teacher' => $this->session->surname));
+        $query = $this->db->where('teacher', $this->session->surname)
+                ->get('classes');
         return $query->result_array();
     }
 

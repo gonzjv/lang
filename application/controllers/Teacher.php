@@ -3,7 +3,9 @@
 class Teacher extends CI_Controller {
 
     public function classes() {
+        $this->load->library('session');
         $this->load->helper('url');
+        $this->load->helper('form');
 //        $this->load->helper('security');
         $this->load->helper('html');
 //        $this->load->database();

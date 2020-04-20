@@ -19,15 +19,15 @@
     </div>
 </div>
 <?php foreach ($classes as $class_item): ?>
-    <div class="row">
+    <div class="row mt-3">
         <div class="col-md-3">
-            <div class="text-center lead background rounded">
+            <div class="mx-5 text-center lead background rounded">
                 <?php echo $class_item['name']; ?>
             </div>
-            <div>
-                <?php echo form_open('teacher/classes'); ?>
-                <button type="submit" class="btn btn-sm background">Pupils</button>
-            </div>
+        </div>
+        <div class="col-md-3">
+            <?php echo form_open('teacher/classes'); ?>
+            <button type="submit" class="btn btn-sm background">Pupils</button>
         </div>
     </div>
     </form>

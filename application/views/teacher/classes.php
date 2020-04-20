@@ -1,18 +1,7 @@
 <div class="row">
     <div class="col-md-3">
         <div class="mt-3 text-center lead background rounded">
-            <?php echo $this->session->role . ' ' . $this->session->name . ', you are here!' . $this->session->surname?>
-            
-        </div>
-        <div class="mt-3 mx-5 text-center lead background rounded">
-            <?php echo $title; ?>
-            <div>
-                <?php foreach ($classes as $class_item): ?>
-                    <div>
-                        <?php echo $class_item['name']; ?>
-                    </div>
-                <?php endforeach; ?>
-            </div>
+            <?php echo $this->session->role . ' ' . $this->session->name . ', you are here!' ?>
         </div>
     </div>
     <div class="col-md-2">
@@ -21,4 +10,27 @@
             <button type="submit" class="btn btn-warning btn-sm">Quit🌄</button>
         </div>
     </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="mx-5 text-center lead background rounded">
+            <?php echo $title; ?>
+        </div>
+    </div>
+</div>
+<?php foreach ($classes as $class_item): ?>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="text-center lead background rounded">
+                <?php echo $class_item['name']; ?>
+            </div>
+            <div>
+                <?php echo form_open('teacher/classes'); ?>
+                <button type="submit" class="btn btn-sm background">Pupils</button>
+            </div>
+        </div>
+    </div>
+    </form>
+<?php endforeach; ?>
+</div>
 </div>

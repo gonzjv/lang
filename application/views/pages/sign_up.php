@@ -43,6 +43,7 @@
         <?php
         echo form_label('', 'password');
         $data = array(
+            'type' => 'password',
             'name' => 'password',
             'class' => 'form-control',
             'placeholder' => 'Password'
@@ -56,6 +57,7 @@
         <?php
         echo form_label('', 'passconf');
         $data = array(
+            'type' => 'password',
             'name' => 'passconf',
             'class' => 'form-control',
             'placeholder' => 'Password Confirmation'

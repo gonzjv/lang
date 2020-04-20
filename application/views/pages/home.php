@@ -63,6 +63,7 @@
             <?php
             echo form_label('', 'password');
             $data = array(
+                'type' => 'password',
                 'name' => 'password',
                 'class' => 'form-control background',
                 'placeholder' => 'Password'

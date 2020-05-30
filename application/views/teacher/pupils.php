@@ -22,31 +22,26 @@
     <div class="col-md-5">
         <table class="table background rounded">
             <thead>
-<!--                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                </tr>-->
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Surname</th>
+                </tr>
             </thead>
             <tbody>
                 <?php foreach ($pupils as $pupils_item): ?>
                     <tr>
-                        <th scope="row"><?php echo $pupils_item['name']; echo $pupils_item['surname']; ?></th>
-                        <td><?php
-//                            echo form_open('teacher/pupils');
-//                            echo form_hidden('class', $class_item['name']);
-                            ?>
-                            <button type="submit" class="btn btn-sm background">🚸 Pupils</button>
+                        <th scope="row"><?php echo $pupils_item['id']; ?></th>
+                        <td><?php echo $pupils_item['name']; ?>
+                        </td>
+                        <td><?php echo $pupils_item['surname']; ?>
+                        </td>
+                        <td><?php echo form_open('pupil'); ?>
+                            <button type="submit" class="btn background">Info</button>
                             </form>
                         </td>
-                        <td><?php echo form_open('login/session_unset'); ?>
-                            <button type="submit" class="btn btn-sm background">📘 Class Diary</button>
-                            </form>
-                        </td>
-                        <td>@mdo</td>
                     </tr>
-<?php endforeach; ?>
+                <?php endforeach; ?>
             </tbody>
         </table>
         </form>

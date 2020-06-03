@@ -8,6 +8,7 @@
         <div class="mt-3">
             <?php echo form_open('login/session_unset'); ?>
             <button type="submit" class="btn btn-warning btn-sm">Quit🌄</button>
+            </form>
         </div>
     </div>
 </div>
@@ -31,20 +32,30 @@
             <tbody>
                 <?php foreach ($pupils as $pupils_item): ?>
                     <tr>
-                        <th scope="row"><?php echo $pupils_item['id']; ?></th>
+                        <th scope="row">
+                            <?php echo $pupils_item['id']; ?>
+                        </th>
                         <td><?php echo $pupils_item['name']; ?>
                         </td>
                         <td><?php echo $pupils_item['surname']; ?>
                         </td>
-                        <td><?php echo form_open('pupil'); ?>
-                            <button type="submit" class="btn background">Info</button>
+                        <td>
+                            <?php
+                            echo form_open('pupil');
+                            echo form_hidden('pupil', $pupils_item['id']);
+                            $data = array(
+                                'type' => 'submit',
+                                'class' => 'btn-sm',
+                                'content' => 'Info'
+                            );
+                            echo form_button($data);
+                            ?>
                             </form>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-        </form>
     </div>
 </div>
 </div>

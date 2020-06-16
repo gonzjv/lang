@@ -41,7 +41,7 @@
                         </td>
                         <td>
                             <?php
-                            echo form_open('pupil');
+                            echo form_open('pupil', 'class="mb-0"');
                             echo form_hidden('pupil', $pupils_item['id']);
                             $data = array(
                                 'type' => 'submit',

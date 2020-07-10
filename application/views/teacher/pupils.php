@@ -13,13 +13,26 @@
     </div>
 </div>
 <div class="row">
+    
+</div>
+<div class="row mt-3">
+    <div class="col-md-2">
+        <div>
+            <?php echo form_open('teacher/classes'); ?>
+            <button type="submit" class="btn btn-sm background">🚸 Classes</button>
+            </form>
+        </div>
+        <div class="mt-3">
+            <?php echo form_open('login/session_unset'); ?>
+            <button type="submit" class="btn btn-sm background">📆 Lessons schedule</button>
+            </form>
+        </div>
+    </div>
     <div class="col-md-2">
         <div class="mx-1 text-center lead background rounded">
             <?php echo $title; ?>
         </div>
     </div>
-</div>
-<div class="row mt-3">
     <div class="col-md-5">
         <table class="table background rounded">
             <thead>

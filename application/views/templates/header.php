@@ -17,15 +17,11 @@
     <body>
         <div class="wrap">
             <div class="container">
-<!--            <div class="row mt-5">
-            </div>-->
                 <nav class="animated fadeInDown navbar navbar-expand-lg navbar-light background rounded-bottom" id="animate">
-                    <a class="navbar-brand mx-2" href="./">
+                    <!--<a class="navbar-brand mx-2" href="./">-->
+                            <?php echo anchor('home', '🌍 Language school', 'class="lead text-dark navbar-brand mx-2"'); ?>
                         <!--<img src="./img/logo_car.png" width="200" height="57" alt="">-->
-                        <div class="lead text-dark">
-                            <div>🌍 Language school</div> 
-                        </div>
-                    </a>
+                    <!--</a>-->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

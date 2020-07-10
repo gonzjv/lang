@@ -1,10 +1,8 @@
-<div class="row text-light">
+<div class="row">
     <div class="col-2 ml-5 ">
-        <h3>
-            Earth is round!
-        </h3>
+        
     </div>
-    <div class="col-3 ml-5 ">
+    <div class="col-3 ml-5 text-center lead background rounded ">
         <h2><?php echo $title; ?></h2>
 
         <?php foreach ($news as $news_item): ?>
